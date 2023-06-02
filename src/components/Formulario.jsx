@@ -20,10 +20,11 @@ const Formulario = () => {
     };
 
     return (
+        <div className='container text-light'>
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <Row className="mb-3">
                 <Form.Group as={Col} md="4" controlId="validationCustom01">
-                    <Form.Label>First name</Form.Label>
+                    <Form.Label>Nombre</Form.Label>
                     <Form.Control
                         required
                         type="text"
@@ -33,7 +34,7 @@ const Formulario = () => {
                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group as={Col} md="4" controlId="validationCustom02">
-                    <Form.Label>Last name</Form.Label>
+                    <Form.Label>Apellido</Form.Label>
                     <Form.Control
                         required
                         type="text"
@@ -43,55 +44,33 @@ const Formulario = () => {
                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group as={Col} md="4" controlId="validationCustomUsername">
-                    <Form.Label>Username</Form.Label>
+                    <Form.Label>DNI</Form.Label>
                     <InputGroup hasValidation>
-                        <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
                         <Form.Control
-                            type="text"
+                            type="number"
                             placeholder="Username"
                             aria-describedby="inputGroupPrepend"
                             required
                         />
                         <Form.Control.Feedback type="invalid">
-                            Please choose a username.
+                            Ingrese porfavor un numero de DNI valido.
                         </Form.Control.Feedback>
                     </InputGroup>
                 </Form.Group>
             </Row>
             <Row className="mb-3">
                 <Form.Group as={Col} md="6" controlId="validationCustom03">
-                    <Form.Label>City</Form.Label>
+                    <Form.Label>Email</Form.Label>
                     <Form.Control type="text" placeholder="City" required />
                     <Form.Control.Feedback type="invalid">
-                        Please provide a valid city.
-                    </Form.Control.Feedback>
-                </Form.Group>
-                <Form.Group as={Col} md="3" controlId="validationCustom04">
-                    <Form.Label>State</Form.Label>
-                    <Form.Control type="text" placeholder="State" required />
-                    <Form.Control.Feedback type="invalid">
-                        Please provide a valid state.
-                    </Form.Control.Feedback>
-                </Form.Group>
-                <Form.Group as={Col} md="3" controlId="validationCustom05">
-                    <Form.Label>Zip</Form.Label>
-                    <Form.Control type="text" placeholder="Zip" required />
-                    <Form.Control.Feedback type="invalid">
-                        Please provide a valid zip.
+                        Ingrese un correo electronico valido.
                     </Form.Control.Feedback>
                 </Form.Group>
             </Row>
-            <Form.Group className="mb-3">
-                <Form.Check
-                    required
-                    label="Agree to terms and conditions"
-                    feedback="You must agree before submitting."
-                    feedbackType="invalid"
-                />
-            </Form.Group>
-            <Button type="submit">Submit form</Button>
+            <Button type="submit">Enviar</Button>
         </Form>
-    );
+        </div>
+            );
 };
 
 export default Formulario;
